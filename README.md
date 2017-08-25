@@ -41,7 +41,7 @@
 
 ## Installation
 
-1. Download zip archive from the github repository.
+1. Download zip archive from the github repository at [https://github.com/himadriganguly/Himadri_DS3231](https://github.com/himadriganguly/Himadri_DS3231).
 2. Copy folders `Himadri_DS3231` from the zip archive into Arduino `libraries` folder on your computer. Arduino folder is e.g. `My Documents\Arduino\libraries` on Windows or `Documents/Arduino/libraries` on Linux and Mac.
 
 ## Author

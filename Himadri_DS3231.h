@@ -10,7 +10,7 @@ DS3231 library for Arduino.
 @author <a href="mailto:himadri@colourdrift.com">Himadri Ganguly</a>
 @version 1.0.0 19/08/2017
 
-Available from:  https://github.com/
+Available from:  https://github.com/himadriganguly/Himadri_DS3231
 
 This library implements the following features:
   1. Set Date and Time by passing structure variable.
@@ -289,7 +289,7 @@ This library implements the following features:
     /*-------------------------------
       Public Function Declaration
     -------------------------------*/
-    public:      
+    public:
       /**
         Clear Alarm Flag in Status Register
 

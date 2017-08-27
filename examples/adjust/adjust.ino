@@ -40,6 +40,11 @@ void setup() {
       2017
     };
 
+    // Another method of initializing Date and Time. Please comment out the previous timeVals before uncommenting this section
+    // ds3231.initializeDateTime("Aug 27 2017 SUN", "3:30:45 PM", &timeVals);   // 12 Hour format
+    // OR
+    // ds3231.initializeDateTime("Aug 27 2017 SUN", "13:30:45", &timeVals);     // 24 Hour format
+
     /* Set Date and Time into DS3231 Timekeeping Register
      * Uncomment the following section to set Date and Time and upload
      * After that again comment this section and upload the code

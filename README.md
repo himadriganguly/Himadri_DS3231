@@ -44,6 +44,9 @@
 1. Download zip archive from the github repository at [https://github.com/himadriganguly/Himadri_DS3231](https://github.com/himadriganguly/Himadri_DS3231).
 2. Copy folders `Himadri_DS3231` from the zip archive into Arduino `libraries` folder on your computer. Arduino folder is e.g. `My Documents\Arduino\libraries` on Windows or `Documents/Arduino/libraries` on Linux and Mac.
 
+## Other Projects Using This library
+1. DS3231 Alarm to switch on Relay - [https://github.com/himadriganguly/ds3231_alarm_relay_switch](https://github.com/himadriganguly/ds3231_alarm_relay_switch).
+
 ## Author
 
 1. Himadri Ganguly [https://github.com/himadriganguly/](https://github.com/himadriganguly/)

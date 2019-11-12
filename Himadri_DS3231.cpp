@@ -1830,4 +1830,5 @@ boolean Himadri_DS3231::setAgingRegValue(int8_t val) {
   } else {
     return false;
   }
+  return true;
 };

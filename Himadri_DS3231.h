@@ -26,7 +26,7 @@ This library implements the following features:
      and meridian OR Alarm2 matching for exact minutes / hour with time format
      and meridian
   10. Set Alarm1 matching seconds and minutes
-  11. Set Alaram1 matching seconds, minutes and hour
+  11. Set Alarm1 matching seconds, minutes and hour
       OR Alarm2 matching minutes and hour
   12. Set Alarm1 matching day / date with hour, minutes and seconds
       OR Alarm2 matching day / date with hour, minutes
@@ -117,7 +117,7 @@ This library implements the following features:
   #define DS3231_YEAR_REG             0x06    // Year Register
 
   // Alarm1 Register
-  #define DS3231_AL1SEC_REG           0x07    // Alaram1 Seconds Register
+  #define DS3231_AL1SEC_REG           0x07    // Alarm1 Seconds Register
   #define DS3231_AL1MIN_REG           0x08    // Alarm1 Minutes Register
   #define DS3231_AL1HOUR_REG          0x09    // Alarm1 Hour Register
   #define DS3231_AL1WDAY_REG          0x0A    // Alarm1 Day Register
@@ -401,7 +401,7 @@ This library implements the following features:
       boolean readDateTime(struct timeParameters* timeVals);
 
       /**
-        Set Alaram on every period of Seconds / Minutes / Hour
+        Set Alarm on every period of Seconds / Minutes / Hour
 
         @param periodicity Choice value of unsigned integer of setting the Alarm
         @param alarm Alarm choice unsigned integer value. It can be Alarm1 / Alarm2
@@ -432,7 +432,7 @@ This library implements the following features:
       boolean setAlarm(uint8_t ss, uint8_t mm, uint8_t alarm);
 
       /**
-        Set Alaram matching seconds, minutes and hour
+        Set Alarm matching seconds, minutes and hour
 
         @param ss Unsigned integer value for Seconds
         @param mm Unsigned integer value for Minutes
@@ -445,7 +445,7 @@ This library implements the following features:
       boolean setAlarm(uint8_t ss, uint8_t mm, uint8_t hh, boolean tf, boolean md, uint8_t alarm);
 
       /**
-        Set Alaram matching seconds, minutes and hour
+        Set Alarm matching seconds, minutes and hour
 
         @param ss Unsigned integer value for Seconds
         @param mm Unsigned integer value for Minutes

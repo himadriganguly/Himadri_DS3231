@@ -26,7 +26,7 @@ This library implements the following features:
      and meridian OR Alarm2 matching for exact minutes / hour with time format
      and meridian
   10. Set Alarm1 matching seconds and minutes
-  11. Set Alaram1 matching seconds, minutes and hour
+  11. Set Alarm1 matching seconds, minutes and hour
       OR Alarm2 matching minutes and hour
   12. Set Alarm1 matching day / date with hour, minutes and seconds
       OR Alarm2 matching day / date with hour, minutes
@@ -896,7 +896,7 @@ boolean Himadri_DS3231::readDateTime(struct timeParameters* timeVals) {
 };
 
 /**
-  Set Alaram on every period of Seconds / Minutes / Hour
+  Set Alarm on every period of Seconds / Minutes / Hour
 **/
 boolean Himadri_DS3231::setAlarm(uint8_t periodicity, uint8_t alarm) {
   Wire.beginTransmission(DS3231_ADDRESS);
@@ -1202,7 +1202,7 @@ boolean Himadri_DS3231::setAlarm(uint8_t ss, uint8_t mm, uint8_t alarm) {
 };
 
 /**
-  Set Alaram matching seconds, minutes and hour
+  Set Alarm matching seconds, minutes and hour
 */
 boolean Himadri_DS3231::setAlarm(uint8_t ss, uint8_t mm, uint8_t hh, boolean tf, boolean md, uint8_t alarm) {
   Wire.beginTransmission(DS3231_ADDRESS);
@@ -1304,7 +1304,7 @@ boolean Himadri_DS3231::setAlarm(uint8_t ss, uint8_t mm, uint8_t hh, boolean tf,
 };
 
 /**
-  Set Alaram matching seconds, minutes and hour
+  Set Alarm matching seconds, minutes and hour
 **/
 boolean Himadri_DS3231::setAlarm(uint8_t ss, uint8_t mm, uint8_t hh,
   uint8_t dyDt, boolean dy, boolean tf, boolean md, uint8_t alarm) {
@@ -1804,16 +1804,16 @@ boolean Himadri_DS3231::bsyStatus() {
 /**
   Get Aging Register value
 **/
-uint8_t Himadri_DS3231::agingRegValue() {
+int8_t Himadri_DS3231::agingRegValue() {
   uint8_t agingReg = readRegister(DS3231_AGING_REG);
 
   if ((agingReg & 0x80) != 0) {                 // 10000000
     agingReg ^= 0xFF;                           // 11111111
     agingReg  += 0x1;                           // 00000001
-    agingReg = agingReg * -1;
+    return (int8_t) agingReg * -1;
   }
 
-  return agingReg;
+  return (int8_t) agingReg;
 };
 
 /**
@@ -1830,4 +1830,6 @@ boolean Himadri_DS3231::setAgingRegValue(int8_t val) {
   } else {
     return false;
   }
+
+  return true;
 };

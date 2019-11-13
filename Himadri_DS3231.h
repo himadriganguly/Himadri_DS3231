@@ -610,7 +610,7 @@ This library implements the following features:
 
         @return Return the value of Aging Register
       */
-      uint8_t agingRegValue(void);
+      int8_t agingRegValue(void);
 
       /**
         Set Aging Register value, it takes user-provided value to add to or

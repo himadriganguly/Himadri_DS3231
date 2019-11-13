@@ -1804,16 +1804,16 @@ boolean Himadri_DS3231::bsyStatus() {
 /**
   Get Aging Register value
 **/
-uint8_t Himadri_DS3231::agingRegValue() {
+int8_t Himadri_DS3231::agingRegValue() {
   uint8_t agingReg = readRegister(DS3231_AGING_REG);
 
   if ((agingReg & 0x80) != 0) {                 // 10000000
     agingReg ^= 0xFF;                           // 11111111
     agingReg  += 0x1;                           // 00000001
-    agingReg = agingReg * -1;
+    return (int8_t) agingReg * -1;
   }
 
-  return agingReg;
+  return (int8_t) agingReg;
 };
 
 /**
@@ -1830,5 +1830,6 @@ boolean Himadri_DS3231::setAgingRegValue(int8_t val) {
   } else {
     return false;
   }
+
   return true;
 };
